@@ -28,7 +28,7 @@ import "core:mem"
 // ***
 // 
 // & := Second throw
-// # := Second thorw, and you are safe
+// # := Second throw, and you are safe
 // 
 // 7 tokens per player
 // 4d4; 2 of 4 vertecies are white.
