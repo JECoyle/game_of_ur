@@ -90,25 +90,12 @@ config :: struct
 	DisablePrint: bool
 }
 
-when false
-{	
 turn_info :: struct
 {
 	Valid: byte,
 	Moves: byte, // 0, 1, 2, 3, 4;
 	X: byte,
 	Y: byte
-}
-}
-else
-{
-turn_info :: bit_field
-{
-	Valid: 1,
-	Moves: 3, // 0, 1, 2, 3, 4;
-	X: 2,
-	Y: 3
-}
 }
 
 game_state :: struct
@@ -1068,9 +1055,6 @@ PrintTurnHistory :: proc(TurnHistory: [2][dynamic]turn_info, X, Y: i16, HistoryC
 
 main :: proc()
 {
-	// println("Oh boy, Here I go programmin' again!");
-	// println();
-	
 	PreviousCodePage: = GetConsoleCodePage();
 	SetConsoleCodePage(65001);
 	
@@ -1291,21 +1275,3 @@ main :: proc()
 	
 	SetConsoleCodePage(PreviousCodePage);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
